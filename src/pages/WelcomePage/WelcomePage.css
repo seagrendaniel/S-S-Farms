@@ -1,0 +1,57 @@
+.bg {
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://i.imgur.com/59JcNdz.jpg);
+    position: fixed;
+
+    text-align: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+      
+    /* Set up positioning */
+    top: 0;
+    left: 0;
+  }
+  
+  @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    .bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
+
+  .welcome-header {
+      text-align: center;
+      justify-self: center;
+      margin: 22vmin auto auto auto;
+      font-size: 9vmin;
+      color: #081109;
+      font-family: 'Amatic SC', cursive;
+      color: white;
+      font-weight: 700;
+    }
+    
+    .welcome-btn {
+        background-color: transparent;
+        justify-self: center;
+        font-family: 'Amatic SC', cursive;
+        margin: auto auto 54vmin auto;
+        font-weight: 700;
+        border: none;
+        font-size: 36px;
+        color: white;
+    }
+
+    .welcome-btn:hover {
+        color: black;
+    }
