@@ -1,6 +1,43 @@
 .login {
     display: flex;
     color: black;
-    background-color: white;
-    align-items: right;
+    font-family: 'Amatic SC', cursive;
+    background-color: #e3f2fd;
+    justify-content: space-between;
+
 }
+
+.home-btn {
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+h3 {
+  font-size: 5vmin;  
+}
+
+.home-btn:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3vmin;
+    /* text-decoration: none; */
+}
+
+.nav-btn {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-btn:hove {
+    color: darkblue;
+    text-decoration: none;
+}
+
+
