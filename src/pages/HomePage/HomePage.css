@@ -1,0 +1,25 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+}
+
+h1.home-header {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    font-weight: 900;
+    font-size: 12vmin;
+}
+
+
+.intro {
+    display: flex;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Alegreya', serif;
+}
+
+.fall-field {
+    width: 50%;
+    height: auto;
+}

@@ -1,0 +1,18 @@
+h1.about-header {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    font-weight: 900;
+    font-size: 12vmin;
+}
+
+.about-content {
+    display: flex;
+    text-align: left;
+    font-family: 'Alegreya', serif;
+}
+
+.zelda-logo {
+    width: 20%;
+    /* border-radius: 50%; */
+}

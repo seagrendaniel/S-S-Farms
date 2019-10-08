@@ -5,6 +5,8 @@ import WelcomePage from '../WelcomePage/WelcomePage';
 import HomePage from '../HomePage/HomePage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
+import AboutPage from '../AboutPage/AboutPage';
+import ShopPage from '../ShopPage/ShopPage';
 
 import './App.css';
 
@@ -25,9 +27,15 @@ class App extends Component {
         <Route exact path='/signup' render={props =>
           <SignupPage />
         } />
+        <Route exact path='/about' render={props =>
+          <AboutPage />
+        } />
+        <Route exact path='/shop' render={props =>
+          <ShopPage />
+      } />
       </Switch>
-    );
+      );
+    }
   }
-}
-
-export default App;
+  
+  export default App;

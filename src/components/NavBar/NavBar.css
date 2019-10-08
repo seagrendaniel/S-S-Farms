@@ -40,4 +40,14 @@ h3 {
     text-decoration: none;
 }
 
+.left-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h4.slogan {
+    align-self: center;
+    margin-left: 8vmin;
+}
+
 
