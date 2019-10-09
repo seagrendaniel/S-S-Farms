@@ -7,7 +7,10 @@ import './HomePage.css'
 const HomePage = (props) => {
     return (
         <div>
-            <div className="nav-bar"><NavBar /></div>
+            <div className="nav-bar"><NavBar
+                user={props.user}
+                handleLogout={props.handleLogout}
+            /></div>
             <div className="homepage fade-in">
                 <h1 className="home-header">WELCOME TO S & S FARMS</h1>
                 <div className="fluid-container intro">
