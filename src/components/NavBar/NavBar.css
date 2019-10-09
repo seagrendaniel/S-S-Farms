@@ -4,6 +4,7 @@
     font-family: 'Amatic SC', cursive;
     background-color: #e3f2fd;
     justify-content: space-between;
+    /* position: fixed; */
 
 }
 
@@ -49,5 +50,7 @@ h4.slogan {
     align-self: center;
     margin-left: 8vmin;
 }
+
+
 
 

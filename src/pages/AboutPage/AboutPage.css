@@ -9,10 +9,20 @@ h1.about-header {
 .about-content {
     display: flex;
     text-align: left;
+    vertical-align: bottom;
     font-family: 'Alegreya', serif;
 }
 
 .zelda-logo {
-    width: 20%;
+    width: 30%;
+    height: auto;
     /* border-radius: 50%; */
+}
+
+p {
+    margin-top: 3vmin;
+}
+
+ul {
+    
 }
