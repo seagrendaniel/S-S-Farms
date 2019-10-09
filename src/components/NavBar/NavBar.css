@@ -51,6 +51,14 @@ h4.slogan {
     margin-left: 8vmin;
 }
 
+.temp {
+    font-weight: 600;
+    margin-top: 0.25vmin;
+}
+
+.temp-icon {
+    margin-top: -8px;
+}
 
 
 

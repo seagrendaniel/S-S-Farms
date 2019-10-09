@@ -29,7 +29,11 @@ userSchema.pre('save', function(next) {
 });
 
 userSchema.methods.comparePassword = function(tryPassword, cb) {
-  bcrpyt.compare(tryPassword, this.password, cb);
-}
+  // 'this' represents the document that you called comparePassword on
+  bcrypt.compare(tryPassword, this.password, function(err, isMatch) {
+    if (err) return cb(err);
+    cb(null, isMatch);
+  });
+};
 
 module.exports = mongoose.model('User', userSchema);

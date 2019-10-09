@@ -10,6 +10,8 @@ const HomePage = (props) => {
             <div className="nav-bar"><NavBar
                 user={props.user}
                 handleLogout={props.handleLogout}
+                temp={props.temp}
+                icon={props.icon}
             /></div>
             <div className="homepage fade-in">
                 <h1 className="home-header">WELCOME TO S & S FARMS</h1>

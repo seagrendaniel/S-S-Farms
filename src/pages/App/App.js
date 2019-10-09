@@ -8,6 +8,8 @@ import AboutPage from '../AboutPage/AboutPage';
 import ShopPage from '../ShopPage/ShopPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
+import { getCurWeather } from '../../services/weather-api';
+
 
 import './App.css';
 
@@ -16,8 +18,19 @@ class App extends Component {
     super();
     this.state = {
       // Initialize user if there's a token, otherwise null
-      user: userService.getUser()
+      user: userService.getUser(),
+      temp: null,
+      icon: null
     };
+  }
+
+
+  async componentDidMount(){
+    const weatherData = await getCurWeather()
+    this.setState({
+      temp: Math.round(weatherData.main.temp),
+      icon: weatherData.weather[0].icon
+    });
   }
 
   handleLogout = () => {
@@ -36,9 +49,11 @@ class App extends Component {
           <WelcomePage />
         } />
         <Route exact path='/home' render={props =>
-          <HomePage 
-          handleLogout={this.handleLogout}
-          user={this.state.user}
+          <HomePage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            temp={this.state.temp}
+            icon={this.state.icon}
           />
         } />
         <Route exact path='/login' render={({ history }) =>
@@ -54,10 +69,20 @@ class App extends Component {
           />
         } />
         <Route exact path='/about' render={props =>
-          <AboutPage />
+          <AboutPage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            temp={this.state.temp}
+            icon={this.state.icon}
+          />
         } />
         <Route exact path='/shop' render={props =>
-          <ShopPage />
+          <ShopPage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            temp={this.state.temp}
+            icon={this.state.icon}
+          />
         } />
       </Switch>
     );

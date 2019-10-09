@@ -10,6 +10,15 @@ const NavBar = (props) => {
             <h4 className="slogan">Home of Zelda's Farm Goods</h4>
         </div>
         <div className="nav-items">
+            <div className="temp">{props.temp}&deg;</div>
+            {props.icon && 
+            <img
+              src={`https://openweathermap.org/img/w/${props.icon}.png`}
+              alt='Current Conditions'
+              className='temp-icon'
+            />
+          }
+            &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <span className='nav-btn'>WELCOME, {props.user.name}!</span>
             &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <Link to='/shop' className="nav-btn">Shop</Link>
@@ -26,6 +35,15 @@ const NavBar = (props) => {
             <h4 className="slogan">Home of Zelda's Farm Goods</h4>
         </div>
         <div className="nav-items">
+        <div className="temp">{props.temp}&deg;</div>
+            {props.icon && 
+            <img
+              src={`https://openweathermap.org/img/w/${props.icon}.png`}
+              alt='Current Conditions'
+              className='temp-icon'
+            />
+          }
+            &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <Link to='/shop' className="nav-btn">Shop</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
              <Link to='/about' className="nav-btn">About</Link>
