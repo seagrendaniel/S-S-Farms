@@ -1,11 +1,24 @@
 const User = require('../models/user');
+const Review = require('../models/review');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
 
 module.exports = {
   signup,
-  login
+  login,
+  addReview,
+  // deleteReview
 };
+
+async function deleteReview(req, res) {
+
+
+}
+
+async function addReview(req, res) {
+  const review = await Review.create(req.body);
+  res.status(201).json(review);
+}
 
 async function signup(req, res) {
   const user = new User(req.body);

@@ -6,6 +6,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ShopPage from '../ShopPage/ShopPage';
+import ReviewsPage from '../ReviewsPage/ReviewsPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
 import { getCurWeather } from '../../services/weather-api';
@@ -60,12 +61,16 @@ class App extends Component {
           <LoginPage
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin}
+            temp={this.state.temp}
+            icon={this.state.icon}
           />
         } />
         <Route exact path='/signup' render={({ history }) =>
           <SignupPage
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin}
+            temp={this.state.temp}
+            icon={this.state.icon}
           />
         } />
         <Route exact path='/about' render={props =>
@@ -84,6 +89,14 @@ class App extends Component {
             icon={this.state.icon}
           />
         } />
+        <Route exact path='/reviews' render={props =>
+          <ReviewsPage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            temp={this.state.temp}
+            icon={this.state.icon}
+            />
+      } />
       </Switch>
     );
   }
