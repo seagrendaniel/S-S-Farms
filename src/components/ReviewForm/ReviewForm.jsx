@@ -14,6 +14,11 @@ class ReviewForm extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.props.handleAddReview(this.state.formData);
+        const formData = {};
+        this.setState({
+            formData
+        })
+        e.target.children[0].value = '';
     };
 
     handleChange = e => {
@@ -31,7 +36,7 @@ class ReviewForm extends Component {
             <form ref={this.formRef} action="/reviews" method="POST" onSubmit={this.handleSubmit}>
                 <textarea 
                     name="body" 
-                    cols="50" rows="10" 
+                    cols="50" rows="5" 
                     placeholder="Enter your review here"
                     value={this.state.formData.body}
                     onChange={this.handleChange}

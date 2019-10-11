@@ -124,6 +124,7 @@ class App extends Component {
             user={this.state.user}
             temp={this.state.temp}
             icon={this.state.icon}
+            reviews={this.state.reviews}
             handleAddReview={this.handleAddReview}
             handleUpdateReview={this.handleUpdateReview}
             handleDeleteReview={this.handleDeleteReview}
