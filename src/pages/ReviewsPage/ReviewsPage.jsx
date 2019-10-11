@@ -14,7 +14,12 @@ const ReviewsPage = (props) => {
             />
             Post your review here!
         </div>
-            <ReviewsPage />
+            <ReviewForm
+                handleAddReview={props.handleAddReview}
+                handleUpdateReview={props.handleUpdateReview}
+                handleDeleteReview={props.handleDeleteReview}
+                history={props.history}
+            />
         </>
     )
 };

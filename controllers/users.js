@@ -17,6 +17,7 @@ async function deleteReview(req, res) {
 
 async function addReview(req, res) {
   const review = await Review.create(req.body);
+  console.log('Review', review);
   res.status(201).json(review);
 }
 

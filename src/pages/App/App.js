@@ -10,6 +10,7 @@ import ReviewsPage from '../ReviewsPage/ReviewsPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
 import { getCurWeather } from '../../services/weather-api';
+import * as reviewAPI from '../../services/reviews-api';
 
 
 import './App.css';
@@ -21,10 +22,38 @@ class App extends Component {
       // Initialize user if there's a token, otherwise null
       user: userService.getUser(),
       temp: null,
-      icon: null
+      icon: null,
+      reviews: []
     };
   }
 
+  handleAddReview = async newReviewData => {
+    const newReview = await reviewAPI.create(newReviewData);
+    this.setState(state => ({
+      reviews: [...state.reviews, newReview]
+    }), () => this.props.history.push('/reviews'));
+  }
+
+  handleUpdateReview = async updateReviewData => {
+    const updatedReview = await reviewAPI.update(updateReviewData);
+    const newReviewArray = this.state.reviews.map(r => 
+      r._id === updatedReview._id ? updatedReview : r
+      );
+      this.setState(
+        {reviews: newReviewArray},
+        () => this.props.history.push('/reviews')
+      );
+  }
+
+  handleDeleteReview = async id => {
+    await reviewAPI.deleteOne(id);
+    this.setState(state => ({
+      reviews: state.reviews.filter(r =>r._id !==id)
+    }), () => this.props.history.push('/reviews'));
+  }
+
+
+  /*--- Lifecycle Methods ---*/
 
   async componentDidMount(){
     const weatherData = await getCurWeather()
@@ -89,12 +118,17 @@ class App extends Component {
             icon={this.state.icon}
           />
         } />
-        <Route exact path='/reviews' render={props =>
+        <Route exact path='/reviews' render={({history, location}) =>
           <ReviewsPage
             handleLogout={this.handleLogout}
             user={this.state.user}
             temp={this.state.temp}
             icon={this.state.icon}
+            handleAddReview={this.handleAddReview}
+            handleUpdateReview={this.handleUpdateReview}
+            handleDeleteReview={this.handleDeleteReview}
+            location={location}
+            history={history}
             />
       } />
       </Switch>
