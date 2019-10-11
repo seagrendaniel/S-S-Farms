@@ -33,7 +33,7 @@ class ReviewForm extends Component {
 
     render() {
         return (
-            <form ref={this.formRef} action="/api/reviews" method="POST" onSubmit={this.handleSubmit} >
+            <form ref={this.formRef} onSubmit={this.handleSubmit} >
                 <textarea 
                     className="review-box"
                     name="body" 

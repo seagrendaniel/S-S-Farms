@@ -2,7 +2,8 @@ const BASE_URL = '/api/reviews';
 
 export function getAll() {
     return fetch(BASE_URL)
-        .then(res => res.json());
+        .then(res => res.json())
+        .then(reviews => reviews);
 }
 
 export function create(review) {

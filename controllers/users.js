@@ -22,7 +22,9 @@ async function deleteReview(req, res) {
 }
 
 async function addReview(req, res) {
+  console.log("===============", req.body)
   const review = await Review.create(req.body);
+  console.log("===============", review)
   res.status(201).json(review);
 }
 

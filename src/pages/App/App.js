@@ -61,9 +61,12 @@ class App extends Component {
 
   async componentDidMount(){
     const weatherData = await getCurWeather()
+    const reviewTry = await reviewAPI.getAll();
+    console.log('hitting');
     this.setState({
       temp: Math.round(weatherData.main.temp),
-      icon: weatherData.weather[0].icon
+      icon: weatherData.weather[0].icon,
+      reviews: reviewTry
     });
   }
 
