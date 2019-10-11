@@ -6,7 +6,8 @@ const SECRET = process.env.SECRET;
 module.exports = {
   addReview,
   deleteReview,
-  updateReview
+  updateReview,
+  getAllReviews
 };
 
 async function updateReview(req, res) {
@@ -24,5 +25,10 @@ async function addReview(req, res) {
   const review = await Review.create(req.body);
   console.log("===============", review)
   res.status(201).json(review);
+}
+
+async function getAllReviews(req, res) {
+    const reviews = await Review.find({});
+    res.status(200).json(reviews);
 }
 

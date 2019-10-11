@@ -6,7 +6,7 @@ const BASE_URL = '/api/reviews';
 //         .then(res => res.json())
 //         .then(reviews => {
 //            console.log("reviews", reviews)
-//         //    return reviews 
+//            return reviews 
 //         })
 //         .catch(err => console.log(err))
 // }
