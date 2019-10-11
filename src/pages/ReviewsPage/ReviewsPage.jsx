@@ -6,7 +6,6 @@ import ReviewCard from '../../components/ReviewCard/ReviewCard';
 import './ReviewsPage.css'
 
 const ReviewsPage = (props) => {
-    console.log(props.user)
     return (
         <>
             <div>

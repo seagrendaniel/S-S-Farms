@@ -53,7 +53,6 @@ class App extends Component {
     }), () => {
       this.props.history.push('/reviews')}
       );
-      console.log('hitting', this.state);
   }
 
 
