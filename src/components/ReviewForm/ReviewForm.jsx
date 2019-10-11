@@ -5,7 +5,8 @@ class ReviewForm extends Component {
     state = {
         invalidForm: true,
         formData: {
-            body: ''
+            body: '',
+            rating: 0
         }
     };
 
@@ -31,17 +32,18 @@ class ReviewForm extends Component {
 
 
     render() {
-        console.log(this.props.history);
         return (
-            <form ref={this.formRef} action="/reviews" method="POST" onSubmit={this.handleSubmit}>
+            <form ref={this.formRef} action="/api/reviews" method="POST" onSubmit={this.handleSubmit} >
                 <textarea 
+                    className="review-box"
                     name="body" 
                     cols="50" rows="5" 
                     placeholder="Enter your review here"
                     value={this.state.formData.body}
                     onChange={this.handleChange}
                     ></textarea>
-                <input type="submit" value="Submit Review" className="add-button"></input>
+                
+                <input type="submit" value="Submit Review" className="btn btn-success submit"></input>
             </form>
         )
     }

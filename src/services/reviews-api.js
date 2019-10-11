@@ -6,7 +6,6 @@ export function getAll() {
 }
 
 export function create(review) {
-    console.log('REVIEW', review); 
     return fetch(BASE_URL, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },

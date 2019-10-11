@@ -1,26 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ReviewCard({ review, handleDeleteReview }) {
+function ReviewCard({ review, handleDeleteReview, props }) {
+    // console.log(props.user, 'from review card')
     return (
 
         <div className='panel-body'>
             <dl>
                 <dt>Review</dt>
                 <dd>{review.body}</dd>
+                {/* <dd> ->  </dd> */}
+                {/* {props.user ? <dd>{props.user.name}</dd> : console.log('not')} */}
             </dl>
             <div className='panel-footer'>
-                {/* 
-          The following is another approach to provide 
-          data to a different route that's different
-          from the Star Wars lab's solution code.
-          The state object can be accessed in the new
-          route via the location.state object
-        */}
                 <Link
                     className='btn btn-xs btn-warning'
                     to={{
-                        pathname: '/edit',
+                        pathname: 'reviews/edit',
                         state: { review }
                     }}
                 >

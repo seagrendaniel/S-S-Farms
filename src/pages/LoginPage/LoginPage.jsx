@@ -24,9 +24,7 @@ class LoginPage extends Component {
       this.props.handleSignupOrLogin();
       // Successfully signed up - show GamePage
       this.props.history.push('/home');
-      console.log('worked')
     } catch (err) {
-      console.log('Err', err)
       // Use a modal to toast in your apps instead of alert
       alert('Invalid Creds!')
     }

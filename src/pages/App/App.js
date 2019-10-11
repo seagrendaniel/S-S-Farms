@@ -7,6 +7,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ShopPage from '../ShopPage/ShopPage';
 import ReviewsPage from '../ReviewsPage/ReviewsPage';
+import EditReviewPage from '../EditReviewPage/EditReviewPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
 import { getCurWeather } from '../../services/weather-api';
@@ -49,7 +50,10 @@ class App extends Component {
     await reviewAPI.deleteOne(id);
     this.setState(state => ({
       reviews: state.reviews.filter(r =>r._id !==id)
-    }), () => this.props.history.push('/reviews'));
+    }), () => {
+      this.props.history.push('/reviews')}
+      );
+      console.log('hitting', this.state);
   }
 
 
@@ -131,6 +135,18 @@ class App extends Component {
             location={location}
             history={history}
             />
+      } />
+        <Route exact path='/reviews/edit' render={({history, location}) =>
+        <EditReviewPage 
+        handleLogout={this.handleLogout}
+        user={this.state.user}
+        temp={this.state.temp}
+        icon={this.state.icon}
+        reviews={this.state.reviews}
+        handleUpdateReview={this.handleUpdateReview}
+        location={location}
+        history={history}
+        />
       } />
       </Switch>
     );

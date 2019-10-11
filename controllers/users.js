@@ -7,17 +7,22 @@ module.exports = {
   signup,
   login,
   addReview,
-  // deleteReview
+  deleteReview,
+  updateReview
 };
 
+async function updateReview(req, res) {
+  const updatedReview = await Review.findByIdAndUpdate(req.params.id, req.body, {new: true});
+  res.status(200).json(updatedReview);
+}
+
 async function deleteReview(req, res) {
-
-
+  const deletedReview = await Review.findByIdAndRemove(req.params.id);
+  res.status(200).json(deletedReview);
 }
 
 async function addReview(req, res) {
   const review = await Review.create(req.body);
-  console.log('Review', review);
   res.status(201).json(review);
 }
 
