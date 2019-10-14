@@ -17,18 +17,19 @@ const ShopPage = (props) => {
             <h1>Shop Zelda's Products</h1>
             <div className="row">
             <div className="item col"> 
-            <img src="" alt="" className="item-img"/>
             Marionberry Jam
+            <img src="https://i.imgur.com/E4l5EN8.jpg" alt="marionberry-jam" className="item-img"/>
             </div>
             <div className="item col">
-            <img src="" alt="" className="item-img"/>
              Plum Jam
+            <img src="https://i.imgur.com/v0Yg0Ak.jpg" alt="plum-jam" className="item-img"/>
              </div>
             <div className="item col"> 
-            <img src="" alt="" className="item-img"/>
             Blackberry Jam
+            <img src="https://i.imgur.com/LfW3wH2.jpg" alt="blackberry-jam" className="item-img"/>
             </div>
             </div>
+            <br/><br/>
             <div className="row">
             <div className="item col"> 
             Fig Preserves & Marmalade
@@ -43,14 +44,15 @@ const ShopPage = (props) => {
             <img src="https://i.imgur.com/Q1LwvyL.jpg" alt="apple-sauce" className="item-img"/>
             </div>
             </div>
+            <br/><br/>
             <div className="row">
             <div className="item col"> 
             Pear Sauce 
             <img src="" alt="" className="item-img"/>
             </div>
             <div className="item col"> 
-            <img src="" alt="" className="item-img"/>
             Berry Chocolate Topping 
+            <img src="https://i.imgur.com/7YY0SmJ.jpg" alt="blackberries" className="item-img"/>
             </div>
             </div>
             
