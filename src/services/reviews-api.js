@@ -1,16 +1,5 @@
 const BASE_URL = '/api/reviews';
 
-// export function getAll() {
-//     console.log("Get all hit")
-//     fetch(BASE_URL)
-//         .then(res => res.json())
-//         .then(reviews => {
-//            console.log("reviews", reviews)
-//            return reviews 
-//         })
-//         .catch(err => console.log(err))
-// }
-
 export function getAll() {
     return fetch(BASE_URL)
     .then(res => res.json());

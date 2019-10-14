@@ -32,17 +32,19 @@ const AboutPage = (props) => {
                             <br></br>
                             Some of Zelda's products include:
             </p>
-                        <ul className="product-list">
-                            <li>Marionberry Jam</li>
-                            <li>Plum Jam</li>
-                            <li>Blackberry Jam</li>
-                            <li>Fig Preserves & Marmalade</li>
-                            <li>Concord Grape Jam</li>
-                            <li>Apple Sauce</li>
-                            <li>Pear Sauce</li>
-                            <li>Berry Chocolate Topping</li>
+                        
+                        <ul className="product-list list-group list-group-flush">
+                        <Link to='/shop' className="list-group-item z-prod"><li>Marionberry Jam</li></Link>
+                        <Link to='/shop' className="list-group-item z-prod"> <li>Plum Jam</li></Link>
+                        <Link to='/shop' className="list-group-item z-prod"><li>Blackberry Jam</li></Link>
+                        <Link to='/shop' className="list-group-item z-prod"><li>Fig Preserves & Marmalade</li></Link>
+                        <Link to='/shop' className="list-group-item z-prod"><li>Concord Grape Jam</li></Link>
+                        <Link to='/shop' className="list-group-item z-prod"><li>Apple Sauce</li></Link>
+                        <Link to='/shop' className="list-group-item z-prod"><li>Pear Sauce</li></Link>
+                        <Link to='/shop' className="list-group-item z-prod"><li>Berry Chocolate Topping</li></Link>
 
                         </ul>
+                        
                     </div>
                 </div>
             </div>

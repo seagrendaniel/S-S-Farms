@@ -15,6 +15,8 @@ const ReviewsPage = (props) => {
                     temp={props.temp}
                     icon={props.icon}
                 />
+                </div>
+                <body>
                 <h1 className="review-header">Reviews of S&S Farms</h1>
             
                 <div className='ReviewListPage-grid'>
@@ -35,7 +37,7 @@ const ReviewsPage = (props) => {
                 </div>
                 
 
-            </div>
+            
             <ReviewForm
                 user={props.user}
                 handleAddReview={props.handleAddReview}
@@ -43,6 +45,7 @@ const ReviewsPage = (props) => {
                 handleDeleteReview={props.handleDeleteReview}
                 history={props.history}
             />
+            </body>
         </>
     )
 };

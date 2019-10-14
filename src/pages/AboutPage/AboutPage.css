@@ -4,6 +4,7 @@ h1.about-header {
     color: black;
     font-weight: 900;
     font-size: 12vmin;
+    margin-top: 5vmin;
 }
 
 .about-content {
@@ -23,6 +24,21 @@ p {
     margin-top: 3vmin;
 }
 
+.product-list {
+    display: flex;
+    flex-direction: row;
+}
+
 ul {
-    
+    text-decoration: none;
+    list-style: none;
+}
+
+ul:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+
+.z-prod{
+
 }
