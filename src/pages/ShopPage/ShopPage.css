@@ -1,6 +1,6 @@
 .shop-body {
     padding-top: 5vmin;
-
+    font-family: 'Alegreya', serif;
 }
 
 h1 {
@@ -9,4 +9,16 @@ h1 {
     color: black;
     font-weight: 900;
     font-size: 12vmin;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    font-size: 3vmin;
+    font-weight: 500;
+}
+
+.item-img {
+    width: 30vw;
+    height: auto;
 }
