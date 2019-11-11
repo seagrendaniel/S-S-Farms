@@ -8,8 +8,8 @@ router.post('/', reviewsCtrl.addReview);
 /*---------- Protected Routes ----------*/
 // Process the token for only the routes below
 router.use(require('../../config/auth'));
-router.delete('/:id', checkAuth, reviewsCtrl.deleteReview)
-router.put('/:id', checkAuth, reviewsCtrl.updateReview);
+router.delete('/:id', reviewsCtrl.deleteReview)
+router.put('/:id', reviewsCtrl.updateReview);
 
 /*----- Helper Functions -----*/
 function checkAuth(req, res, next) {

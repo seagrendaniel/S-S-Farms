@@ -24,7 +24,7 @@ class EditReviewPage extends Component {
             invalidForm: !this.formRef.current.checkValidity()
         });
     };
-
+    
     render() {
         return (
             <>

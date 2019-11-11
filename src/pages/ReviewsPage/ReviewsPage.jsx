@@ -38,7 +38,7 @@ const ReviewsPage = (props) => {
                 
 
             
-            <ReviewForm
+            <ReviewForm className="review-form"
                 user={props.user}
                 handleAddReview={props.handleAddReview}
                 handleUpdateReview={props.handleUpdateReview}

@@ -12,3 +12,14 @@
     font-weight: 900;
     font-size: 12vmin;
   }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Alegreya', serif;
+
+  }
+
+  .review-form {
+    margin: 0 auto;
+  }
