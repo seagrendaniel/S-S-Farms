@@ -24,6 +24,8 @@ const NavBar = (props) => {
           &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <Link to='/shop' className="nav-btn">Shop</Link>
           &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <Link to='/visit' className="nav-btn">Visit</Link>
+          &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
              <Link to='/about' className="nav-btn">About</Link>
           &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <Link to='/reviews' className="nav-btn">Reviews</Link>
@@ -50,6 +52,8 @@ const NavBar = (props) => {
           }
           &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <Link to='/shop' className="nav-btn">Shop</Link>
+          &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <Link to='/visit' className="nav-btn">Visit</Link>
           &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
              <Link to='/about' className="nav-btn">About</Link>
           &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

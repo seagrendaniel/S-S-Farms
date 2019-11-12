@@ -6,6 +6,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ShopPage from '../ShopPage/ShopPage';
+import VisitPage from '../VisitPage/VisitPage';
 import ReviewsPage from '../ReviewsPage/ReviewsPage';
 import EditReviewPage from '../EditReviewPage/EditReviewPage';
 import userService from '../../utils/userService';
@@ -37,28 +38,29 @@ class App extends Component {
 
   handleUpdateReview = async updateReviewData => {
     const updatedReview = await reviewAPI.update(updateReviewData);
-    const newReviewArray = this.state.reviews.map(r => 
+    const newReviewArray = this.state.reviews.map(r =>
       r._id === updatedReview._id ? updatedReview : r
-      );
-      this.setState(
-        {reviews: newReviewArray},
-        () => this.props.history.push('/reviews')
-      );
+    );
+    this.setState(
+      { reviews: newReviewArray },
+      () => this.props.history.push('/reviews')
+    );
   }
 
   handleDeleteReview = async id => {
     await reviewAPI.deleteOne(id);
     this.setState(state => ({
-      reviews: state.reviews.filter(r =>r._id !==id)
+      reviews: state.reviews.filter(r => r._id !== id)
     }), () => {
-      this.props.history.push('/reviews')}
-      );
+      this.props.history.push('/reviews')
+    }
+    );
   }
 
 
   /*--- Lifecycle Methods ---*/
 
-  async componentDidMount(){
+  async componentDidMount() {
     const weatherData = await getCurWeather()
     const reviewTry = await reviewAPI.getAll();
     console.log('hitting');
@@ -124,7 +126,15 @@ class App extends Component {
             icon={this.state.icon}
           />
         } />
-        <Route exact path='/reviews' render={({history, location}) =>
+        <Route exact path='/visit' render={props =>
+          <VisitPage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            temp={this.state.temp}
+            icon={this.state.icon}
+          />
+        } />
+        <Route exact path='/reviews' render={({ history, location }) =>
           <ReviewsPage
             handleLogout={this.handleLogout}
             user={this.state.user}
@@ -136,20 +146,20 @@ class App extends Component {
             handleDeleteReview={this.handleDeleteReview}
             location={location}
             history={history}
-            />
-      } />
-        <Route exact path='/reviews/edit' render={({history, location}) =>
-        <EditReviewPage 
-        handleLogout={this.handleLogout}
-        user={this.state.user}
-        temp={this.state.temp}
-        icon={this.state.icon}
-        reviews={this.state.reviews}
-        handleUpdateReview={this.handleUpdateReview}
-        location={location}
-        history={history}
-        />
-      } />
+          />
+        } />
+        <Route exact path='/reviews/edit' render={({ history, location }) =>
+          <EditReviewPage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            temp={this.state.temp}
+            icon={this.state.icon}
+            reviews={this.state.reviews}
+            handleUpdateReview={this.handleUpdateReview}
+            location={location}
+            history={history}
+          />
+        } />
       </Switch>
     );
   }
