@@ -33,13 +33,14 @@ h1.home-header {
     
     /* Set up proportionate scaling */
     width: 100%;
-    height: 1510px;
+    height: 1210px;
 }
 
 .intro2 {
-    text-align: left;
+    color: white;
+    text-align: right;
     display: flex;
-    /* flex-direction: row-reverse; */
+    flex-direction: row-reverse;
     font-size: 30px;
     font-family: 'Alegreya', serif;
     background-image: url(https://i.imgur.com/YVQWZHh.jpg);
@@ -48,12 +49,17 @@ h1.home-header {
     background-size: cover;
     background-repeat: no-repeat;
     /* Set rules to fill background */
-    /* width: 100%; */
-    height: 120vh;
+    width: auto;
+    height: 132vh;
 
     
     /* Set up proportionate scaling */
     /* width: 100%;
     height: 1920px; */
+}
+
+.farmhouse-text {
+    margin-top: 65%;
+    margin-right: 3vh;
 }
 

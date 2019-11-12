@@ -29,11 +29,11 @@ const HomePage = (props) => {
                 </div>
                 <div className="fluid-container intro2">
                 <div className="row">
-                    <p className="col-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nam optio facere perspiciatis ipsam necessitatibus eaque doloremque sint modi architecto, ratione voluptate ducimus inventore iure? Aut eveniet eum impedit sunt.
-                    </p>
                     <div className="col-sm">
                     </div>
+                    <p className="col-sm farmhouse-text">
+                        The farmhouse is a wonderful place to try local produce and visit Zelda (pictured below).
+                    </p>
                 </div>
                 </div>
 
