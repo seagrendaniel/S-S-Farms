@@ -15,7 +15,7 @@ const VisitPage = (props) => {
             <div className="fade-in">
                 <h1 className="visit-header"> Visit Zelda's Retreat</h1>
                 <p className="visit-info">
-                    Zelda's retreat features a queen size b
+                    Zelda's retreat features a queen size bed.
                 </p>
             </div>
         </div>
